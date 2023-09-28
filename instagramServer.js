@@ -1,3 +1,11 @@
+//echo "# Backend-Colino" >> README.md
+//git init
+//git add README.md
+//git commit -m "first commit"
+//git branch -M main
+//git remote add origin https://github.com/LorenzoColinoH/Backend-Colino.git
+//git push -u origin main
+
 const express = require("express")
 const bcrypt = require("bcrypt")
 const crypto = require("crypto")
@@ -17,8 +25,9 @@ const spawn = require("child_process").spawn
 const app = express();  // Devuelve el objeto app ,que tendrá sus métodos
 //const uri = "mongodb+srv://lorenzocolinoh:<password>@clusterinstagram.jdupwhr.mongodb.net/"
 //mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-mongoose.connect("mongodb://0.0.0.0:27017/base")
-
+//mongoose.connect("mongodb://0.0.0.0:27017/base")
+//UINwwdfUVo97wijv
+mongoose.connect("mongodb+srv://lorenzocolinoh:UINwwdfUVo97wijv@clusterinstagram.jdupwhr.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
 const storage = multer.diskStorage({
     destination: (req, file, callback)=>{
         callback(null,"./images")
@@ -151,7 +160,7 @@ app.post("/setComment", autenticadoRN, async (req,res)=> {
     post.comments.push(req.body.comment);
     await posts.save()
 })
-
+// sHOz2nvVW2JkXrA9
 app.post("/signup", async (req,res)=>{
     try{
         //Generacion de contraseña
